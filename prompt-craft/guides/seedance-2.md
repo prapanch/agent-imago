@@ -779,7 +779,7 @@ When a Seedance 2.0 output is close but not right, change only **one** element o
 
 ### `## AGENT_RULE` — log every generation
 
-Every Seedance 2.0 call must be logged with: model version string, exact prompt text, reference asset paths (or content hashes), seed/parameters used, output URL, and a quality score. Without this log, no learning compounds, and continuous improvement (Kaizen) is impossible. The DVS prompt library is built from these logs.
+Every Seedance 2.0 call must be logged with: model version string, exact prompt text, reference asset paths (or content hashes), seed/parameters used, output URL, and a quality score. Without this log, no learning compounds, and continuous improvement is impossible. Your prompt library is built from these logs.
 
 ### `## AGENT_RULE` — IP review pass before delivery
 
@@ -1050,4 +1050,4 @@ Read every prompt aloud, in the voice of someone briefing a film crew. The ones 
 
 ---
 
-*End of guide. Update on every Seedance minor version or DVS quarterly review. Owned by Product — DVS. Maintainers: update this file and submit a PR.*
+*End of guide. Update on every Seedance minor version or on a quarterly review. Maintainers: update this file and submit a PR.*

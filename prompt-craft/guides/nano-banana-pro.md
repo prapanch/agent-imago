@@ -449,7 +449,7 @@ one of: camera/lens, lighting setup, color grading, time of day,
 or compositional emphasis.
 ```
 
-You then run all five through Nano Banana 2 at 1K to A/B them at low cost, pick the winner, and only escalate the winner to Pro at 4K. This is the heart of the DVS three-phase pipeline (§9).
+You then run all five through Nano Banana 2 at 1K to A/B them at low cost, pick the winner, and only escalate the winner to Pro at 4K. This is the heart of the three-phase pipeline (§9).
 
 ### 7.5 Variant: refining an existing render
 
@@ -587,7 +587,7 @@ client = genai.Client()
 
 system_prompt = """
 You are generating premium, highly stylized cityscape artwork for
-NBA Top Shot collectibles.
+a sports collectibles project.
 
 All images MUST follow these guidelines:
 - STYLE: Photorealistic architectural detail with cinematic color
@@ -777,7 +777,7 @@ for part in r3.parts:
 
 ## 11. Task-specific prompt recipes
 
-Copy-and-adapt templates for common DVS workflows.
+Copy-and-adapt templates for common production workflows.
 
 ### 11.1 Editorial portrait
 
