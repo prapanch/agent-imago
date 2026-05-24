@@ -3,6 +3,7 @@
 **A field manual for Claude-based and Gemini-based agents generating imagery with Google's Nano Banana 2 (Gemini 3.1 Flash Image)**
 
 > **Version:** 1.0 · **Last refreshed:** May 23, 2026 · **Target model:** `gemini-3.1-flash-image-preview` · **Refinement model:** `gemini-3.5-flash` · **Audience:** AI agents and engineering teams building agentic image-generation workflows
+> **License:** CC BY 4.0 — see repo root LICENSE.md · **Sources:** Google AI for Developers docs, The Keyword (Google), and community prompting guides (cited in Section 15).
 
 ---
 

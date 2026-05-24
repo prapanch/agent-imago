@@ -4,6 +4,8 @@
 **Scope:** Production image generation for agent pipelines
 **Version:** 3.0 — Agent Edition
 **Last refreshed:** May 23, 2026
+**License:** CC BY 4.0 — see repo root LICENSE.md
+**Sources:** Google Cloud Blog, Google Blog, Gemini API docs (cited in Section 15).
 
 ---
 

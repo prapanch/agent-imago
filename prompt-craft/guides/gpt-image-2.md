@@ -4,6 +4,8 @@
 **Audience:** Claude-based and Gemini-based agents that author, refine, and grade image prompts for GPT Image 2
 **Model versions covered:** `gpt-image-2` (released April 21, 2026), with notes on `gpt-image-1.5`, `gpt-image-1`, and `gpt-image-1-mini` for migration contexts
 **Last updated:** May 2026
+**License:** CC BY 4.0 — see repo root LICENSE.md
+**Sources:** See Section 11 for full citations. Primary sources include OpenAI Developer Cookbook, fal.ai prompting guide, and OpenAI release documentation.
 **Prepared for:** production teams
 
 ---

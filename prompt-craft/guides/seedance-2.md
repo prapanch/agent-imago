@@ -4,6 +4,7 @@
 **Purpose:** A single source of truth for writing, refining, and orchestrating Seedance 2.0 prompts at production quality.
 **Owner:** Maintain this document on every quarterly review or whenever ByteDance ships a Seedance minor version.
 **Last refreshed:** 2026-05-23.
+**License:** CC BY 4.0 — see repo root LICENSE.md
 **Sources of truth:** ByteDance Seed official launch blog, Volcengine documentation, Replicate model card, and field reports from Apiyi, HeyMarmot, ZenCreator, and Cutout.pro (cited inline where relevant).
 
 ---
