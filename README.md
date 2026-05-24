@@ -106,16 +106,16 @@ These are reference implementations showing what a complete brief and production
 
 ### If you're an OpenClaw agent
 
-Each directory contains a `SKILL.md` in standard OpenClaw skill format. Install individual skills or the full suite:
+Each directory contains a `SKILL.md` in standard OpenClaw skill format. Clone this repo directly into your workspace `skills/` directory — OpenClaw discovers all nested skills automatically:
 
 ```bash
-# Install the full suite
-openclaw skill install prapanch/agent-imago --all
+git clone https://github.com/prapanch/agent-imago.git ~/clawd/skills/agent-imago
+```
 
-# Or install individual skills
-openclaw skill install prapanch/agent-imago/creative-brief
-openclaw skill install prapanch/agent-imago/prompt-craft
-openclaw skill install prapanch/agent-imago/creative-pipeline
+Or copy any individual skill directory into your `skills/` folder:
+
+```bash
+cp -r agent-imago/creative-brief ~/clawd/skills/
 ```
 
 ### If you're a different kind of agent
