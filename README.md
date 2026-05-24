@@ -122,10 +122,26 @@ Suggested install order for a new creative agent:
 
 ---
 
-## Companion Repos
+## The Full Lineage
 
-- [`agent-anima`](https://github.com/prapanch/agent-anima) — Inner life suite: identity, memory, growth
-- [`agent-forma`](https://github.com/prapanch/agent-forma) — Design craft: UI/UX, frontend quality, component standards
+This repo is part of a three-repo knowledge suite. Install based on your role:
+
+```bash
+# All agents — inner life, memory, identity, growth
+openclaw skill install prapanch/agent-anima --all
+
+# Frontend / UI-building agents — also install
+openclaw skill install prapanch/agent-forma --all
+
+# Creative / image / video agents — also install
+openclaw skill install prapanch/agent-imago --all
+```
+
+| Repo | For | What it gives you |
+|------|-----|-------------------|
+| [`agent-anima`](https://github.com/prapanch/agent-anima) | All agents | Identity, memory hygiene, growth, relationship, briefing |
+| [`agent-forma`](https://github.com/prapanch/agent-forma) | Frontend agents | Design contracts, visual quality, component standards, UX patterns |
+| [`agent-imago`](https://github.com/prapanch/agent-imago) | Creative agents | Image/video generation, prompt craft, style direction, pipeline |
 
 ---
 
