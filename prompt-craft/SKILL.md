@@ -131,9 +131,10 @@ Log every call with: model, prompt, parameters, reference asset paths, output UR
 | Text in images (posters, UI, infographics) | **GPT Image 2** | Near-perfect text rendering |
 | Final production image, complex scenes | **Nano Banana Pro** | Deep reasoning, forced full thinking |
 | Fast iteration, exploration, batch work | **Nano Banana 2** | Pro-grade quality at Flash speed |
-| Animating a still image | **Seedance 2.0** (I2V) | Image-to-video with audio |
-| Text-to-video from scratch | **Seedance 2.0** (T2V) | Multimodal, native audio |
-| Editing an existing video | **Seedance 2.0** (V2V) | ~39% cheaper, more consistent |
+| Animating a still image | **Gemini Omni Flash** | Native I2V, stateful editing, reference tags |
+| Text-to-video (multi-shot narrative) | **Gemini Omni Flash** | World knowledge, conversational editing |
+| Iterative video editing | **Gemini Omni Flash** | Stateful `previous_interaction_id` |
+| High-fidelity I2V or V2V | **Seedance 2.0** | Proven @reference system, V2V mode |
 
 **Cost ladder (approximate, verify against current provider pricing):**
 - Nano Banana 2 at 1K: ~$0.04/image
@@ -160,6 +161,7 @@ Each model has its own formula. The universal skeleton:
 | Nano Banana 2 | 7-element formula | Subject + Action + Location + Composition + Lighting + Style + Technical specs |
 | Nano Banana Pro | 5-element formula | Subject + Action + Location/context + Composition + Style (+ Text) |
 | Seedance 2.0 | 6-step formula | Subject + Action + Environment + Camera + Style + Constraints |
+| Gemini Omni Flash | 6-element video formula | Subject + Action + Environment + Camera + Audio + Constraints |
 
 See the model guides in `guides/` for each formula in full detail.
 

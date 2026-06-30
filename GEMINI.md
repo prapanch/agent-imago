@@ -1271,3 +1271,62 @@ Any word that applies to every possible "good" image should be cut. Before submi
 | beautiful | describe what makes it beautiful |
 | high quality | nothing — model already outputs high quality by default |
 | 8K, ultra-detailed | nothing — use lens + quality settings instead |
+
+
+## Track: gemini-omni-flash
+
+---
+
+### gemini-omni-flash
+
+> Generate and edit video natively with Gemini Omni Flash. Stateful multi-turn editing, I2V with reference tags, audio direction — all through the Interactions API.
+
+# 🎥 Gemini Omni Flash
+
+Model ID: `gemini-omni-flash-preview`. Uses the **Interactions API** — not the Generate Content API used by image models.
+
+## Key differences from image models
+
+- `client.interactions.create(...)` not `client.models.generate_content(...)`
+- No system instructions, temperature, top_p, or negative prompt API fields — fold all negatives into the regular prompt
+- Stateful editing via `previous_interaction_id` — no re-uploading
+- `output_video.data` is SDK-only; REST uses `steps[].content[].data` where type=video
+
+## The 6-element video formula
+
+`Subject + Action + Environment + Camera + Audio + Constraints`
+
+## Single-scene generation (override the default multi-shot behavior)
+
+Add to any prompt: "In a single unbroken scene" or "No scene cuts."
+
+## Stateful editing pattern
+
+```python
+res1 = client.interactions.create(model="gemini-omni-flash-preview", input="...")
+res2 = client.interactions.create(model="gemini-omni-flash-preview", previous_interaction_id=res1.id, input="Edit description. Keep everything else the same.")
+```
+
+## Image reference tags
+
+- `<FIRST_FRAME>` — use attached image as starting frame
+- `<IMAGE_REF_N>` — use image as subject/style reference (zero-indexed)
+
+## Audio direction
+
+Include after visual description: "No dialogue." / "Ambient street noise only." / "Include calm background music."
+
+## Timing events
+
+Natural language: "After 3 seconds, a woman enters from the left."
+Timecode blocks: `[0-3s] Walking [3-6s] Stops [6-10s] Running`
+
+## Limitations (preview)
+
+- No voice editing, no multi-video referencing, no video extension/interpolation
+- No uploaded video editing in EEA/Switzerland/UK (AI-generated video editing IS available)
+- Videos > 4MB: use `response_format: {type: "video", delivery: "uri"}` and poll Files API
+
+## Full guide
+
+`prompt-craft/guides/gemini-omni-flash.md`

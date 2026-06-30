@@ -56,6 +56,7 @@ Full field guides for specific models, in [`prompt-craft/guides/`](./prompt-craf
 | 🍌 | [`nano-banana-2.md`](./prompt-craft/guides/nano-banana-2.md) | Google Gemini 3.1 Flash Image — high-speed, grounding, thought signatures |
 | 🍌+ | [`nano-banana-pro.md`](./prompt-craft/guides/nano-banana-pro.md) | Google Gemini 3 Pro Image — final assets, forced deep reasoning |
 | 🎬 | [`seedance-2.md`](./prompt-craft/guides/seedance-2.md) | ByteDance Seedance 2.0 — video, native audio, @reference system |
+| 🎥 | [`gemini-omni-flash.md`](./prompt-craft/guides/gemini-omni-flash.md) | Google Gemini Omni Flash — native video gen/edit, stateful multi-turn, I2V |
 
 ---
 
@@ -203,4 +204,4 @@ The difference is not the model — it's the agent's understanding of what was n
 
 ---
 
-*Last updated: 2026-05-24 — v1.0 (7 skills + 4 model guides, live/ directory)*
+*Last updated: 2026-06-30 — v1.1 (7 skills + 5 model guides: added Gemini Omni Flash guide)*

@@ -122,13 +122,23 @@ For workflows that animate still images, the pipeline extends:
 Phase 1: Explore (image)
 Phase 2: Refine (image)  ← Must match video aspect ratio
 Phase 3A: Image Master
-Phase 3B: Animate with Seedance 2.0 (I2V)
+Phase 3B: Animate (I2V)
 ```
 
 Critical constraint: the still image must be generated at the **video's target aspect ratio**. Don't generate 1:1 and plan to animate at 16:9. Generate at 16:9 from Phase 1.
 
-**Image-to-video prompt formula:**
-Once you have the right image, the video prompt is short:
+**Model choice for Phase 3B:**
+- **Gemini Omni Flash** — preferred when you need stateful multi-turn editing of the result, or when using reference-tagged subject anchors. Uses the Interactions API (`<FIRST_FRAME>` tag).
+- **Seedance 2.0** — preferred when you have the @reference system pattern established or need V2V transformation. Uses the standard generation API.
+
+**Gemini Omni Flash I2V prompt formula:**
+```
+<FIRST_FRAME>
+[One specific motion]. [One camera move]. [Lighting consistency].
+[Duration] seconds. [Aspect ratio]. No scene cuts.
+```
+
+**Seedance 2.0 I2V prompt formula:**
 ```
 Animate the provided image, preserve composition and colors.
 [One specific motion]. [One camera move]. [Lighting consistency].
@@ -151,6 +161,7 @@ The image carries the composition, color, character, and lighting. The video pro
 | 3 (master) | GPT Image 2 | 2560×1440 high | ~$0.30 |
 | Video T2V/I2V | Seedance 2.0 | 1080p | ~$0.14/sec |
 | Video V2V | Seedance 2.0 | 1080p | ~$0.08/sec |
+| Video T2V/I2V/edit | Gemini Omni Flash | up to 1080p | pricing varies — verify at ai.google.dev |
 
 A typical production asset (12 explorations + 3 refinements + 1 master): ~$1.00–1.50 total.
 
@@ -210,5 +221,5 @@ Phase 3: Master
     ↓
 Log the asset
     ↓
-For video: Animate with Seedance 2.0 (I2V)
+For video: Animate with Gemini Omni Flash (I2V) or Seedance 2.0 (I2V)
 ```
