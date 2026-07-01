@@ -748,7 +748,9 @@ Seedance 2.0 T2V (proven @reference, audio-sync patterns)
 🔍 quality-review → 🚫 output-discipline
 ```
 
-**Decision rule:** When stateful iterative editing matters — especially for product visualization and collectibles work where you're refining across multiple turns — use Gemini Omni Flash. When you need the battle-tested @reference system and V2V mode, use Seedance 2.0.
+**Decision rule (Google/FCP context):** Gemini Omni Flash is the *only* sanctioned video generation model through the Google/FCP partnership. Do not use Veo 3.1. Use Gemini Omni Flash for all T2V, I2V, and video editing work.
+
+**Decision rule (general):** When stateful iterative editing matters — especially for product visualization and collectibles work where you're refining across multiple turns — use Gemini Omni Flash. When you need the battle-tested @reference system and V2V mode, Seedance 2.0 is an alternative outside the FCP context.
 
 ---
 
